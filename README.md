@@ -3,6 +3,11 @@ loopless
 
 Encapsulated .loop function in LESS
 
+Load
+----
+
+    bower --save-dev install loopless
+
 Extend .loop-mix-in
 -------------------
 
