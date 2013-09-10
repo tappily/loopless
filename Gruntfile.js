@@ -8,16 +8,30 @@ module.exports = function(grunt) {
         clean: {
             dist: ['dist']
         },
+        copy: {
+            main: {
+                files: [{
+                        expand: true,
+                        cwd: 'src',
+                        src: ['less/loop.less'],
+                        dest: 'dist/',
+                        filter: 'isFile'
+                    }]
+            }
+        },
         lesslint: {
             options: {
                 formatters: [{
-                  id: 'csslint-xml',
-                  dest: 'report/lesslint.xml'
-                }]
+                        id: 'csslint-xml',
+                        dest: 'report/lesslint.xml'
+                    }]
             },
             src: ['src/less/loop.less']
         },
         jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
             gruntfile: ['Gruntfile.js']
         },
         less: {
@@ -30,8 +44,9 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean',
         'test',
-        'less'
+        'build'
     ]);
 
     grunt.registerTask('test', ['jshint', 'lesslint']);
+    grunt.registerTask('build', ['clean', 'test', 'less', 'copy']);
 };
