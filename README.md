@@ -17,8 +17,8 @@ Loop it
     .loop(1970, 1980, '#kraftwerk', '.model-');
     
 
-Playback
---------
+Reewiiind
+---------
 
     #kraftwerk.model-1970 {
       content: '1970';
