@@ -29,3 +29,12 @@ Playback
       z-index: 1;
     }
     ...
+
+Ups
+---
+
+There are two helpful examples that feed into this solution.
+
+- https://gist.github.com/edwinwebb/5155504
+- http://snipplr.com/view/70819/less-loop-to-generate-classes/
+
