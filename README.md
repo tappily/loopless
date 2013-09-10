@@ -22,8 +22,8 @@ Loop it
     .loop(1970, 1980, '#kraftwerk', '.model-');
     
 
-Rewind selector
----------------
+Rewind
+------
 
     #kraftwerk.model-1970 {
       content: '1970';
