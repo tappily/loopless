@@ -1,6 +1,6 @@
 {
   "name": "loopless",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Encapsulated .loop function in LESS",
   "main": "Gruntfile.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "load-grunt-tasks": "~0.1.0",
     "grunt-lesslint": "~0.13.0",
     "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-release": "~0.5.1"
   }
 }
