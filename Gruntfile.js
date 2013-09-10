@@ -38,6 +38,11 @@ module.exports = function(grunt) {
             sample: {
                 files: {'dist/css/sample.css': 'src/less/sample.less'}
             }
+        },
+        release: {
+            options: {
+                file: 'bower.json'
+            }
         }
     });
 
