@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                         dest: 'report/lesslint.xml'
                     }]
             },
-            src: ['src/less/loop.less']
+            src: ['src/less/*.less']
         },
         jshint: {
             options: {
