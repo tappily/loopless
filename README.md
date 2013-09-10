@@ -3,6 +3,11 @@ loopless
 
 Encapsulated .loop function in LESS
 
+Load
+----
+
+    bower --save-dev install loopless
+
 Extend .loop-mix-in
 -------------------
 
@@ -17,8 +22,8 @@ Loop it
     .loop(1970, 1980, '#kraftwerk', '.model-');
     
 
-Reewiiind
----------
+Rewind
+------
 
     #kraftwerk.model-1970 {
       content: '1970';
