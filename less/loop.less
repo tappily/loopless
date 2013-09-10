@@ -1,5 +1,4 @@
-
-.loop(@from, @to, @selector) {
+.loop(@from, @to, @selector, @splicer) {
     
     @f: floor(@from);
     @t: floor(@to);
@@ -20,6 +19,10 @@
 
     .loop(@f);
     
+}
+
+.loop(@from, @to, @selector) {
+    .loop(@from, @to, @selector, '-');
 }
 
 .loop-mix-in(@selector, @index, @from, @to) {}
