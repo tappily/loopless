@@ -1,0 +1,26 @@
+@import 'loop';
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = '.dance') {
+    content: '@{index}';
+    z-index: (@to - @from) - (@to - @index);
+}
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
+    content: '@{index}';
+    z-index: (@to - @from) - (@to - @index);
+}
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = '#public-enemy') {
+    content: '@{index}';
+    z-index: (@to - @from) - (@to - @index);
+}
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = '#animal-collective') {
+    content: '@{index}';
+    z-index: (@to - @from) - (@to - @index);
+}
+
+.loop(1980, 2020, '.dance');
+.loop(1970, 1980, '#kraftwerk');
+.loop(1980, 1990, '#public-enemy');
+.loop(2000, 2020, '#animal-collective');

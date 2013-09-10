@@ -1,0 +1,32 @@
+{
+  "name": "loopless",
+  "version": "0.0.0",
+  "description": "Encapsulated .loop function in LESS",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tappily/loopless.git"
+  },
+  "keywords": [
+    "LESS",
+    "loop"
+  ],
+  "author": "Brian Tapley",
+  "fullname": "Brian Tapley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tappily/loopless/issues"
+  },
+  "devDependencies": {
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.1.0",
+    "grunt-lesslint": "~0.13.0",
+    "grunt-contrib-jshint": "~0.6.4"
+  }
+}

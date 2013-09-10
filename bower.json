@@ -1,0 +1,12 @@
+{
+  "name": "loopless",
+  "version": "0.0.0",
+  "main": "src/less/loop.less",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
