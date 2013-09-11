@@ -1,3 +1,71 @@
+/* grid */
+@media screen and (min-width: 960px) {
+  .grid {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid {
+    width: 100%;
+  }
+}
+.grid:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+}
+.grid-col {
+  float: left;
+  margin-left: 0.8%;
+}
+@media screen and (max-width: 480px) {
+  .grid-col {
+    float: none;
+    margin-left: 0;
+  }
+}
+.grid-break {
+  clear: left;
+  margin-left: 0;
+}
+.grid-span-1 {
+  width: 7.6%;
+}
+.grid-span-2 {
+  width: 16%;
+}
+.grid-span-3 {
+  width: 24.4%;
+}
+.grid-span-4 {
+  width: 32.8%;
+}
+.grid-span-5 {
+  width: 41.2%;
+}
+.grid-span-6 {
+  width: 49.6%;
+}
+.grid-span-7 {
+  width: 58%;
+}
+.grid-span-8 {
+  width: 66.4%;
+}
+.grid-span-9 {
+  width: 74.8%;
+}
+.grid-span-10 {
+  width: 83.2%;
+}
+.grid-span-11 {
+  width: 91.6%;
+}
+.grid-span-12 {
+  width: 100%;
+}
+/* loopers */
 .tape-1950 {
   content: '1950';
   z-index: 0;

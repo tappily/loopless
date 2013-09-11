@@ -1,5 +1,54 @@
 @import 'loop';
 
+/* grid */
+
+@grid-min-width: 480px;
+@grid-max-width: 960px;
+@grid-width: 100%;
+@grid-gutter-width: 0.8%;
+@grid-span-name: '.grid-span';
+@grid-column-count: 12;
+@grid-column-width: (@grid-width - @grid-gutter-width * (@grid-column-count - 1)) / @grid-column-count;
+
+.grid {
+    @media screen and (min-width:@grid-max-width) {
+        width: @grid-max-width;
+    }
+    @media screen and (max-width:@grid-min-width) {
+        width: 100%;
+    }
+    &:after {
+        clear:both;
+        content:" ";
+        display:block;
+        height:0;
+    }
+}
+
+.grid-col {
+    float: left;
+    margin-left: @grid-gutter-width;
+
+    @media screen and (max-width:@grid-min-width) {
+        float: none;
+        margin-left: 0;
+    }
+}
+
+.grid-break {
+    clear: left;
+    margin-left: 0;
+}
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = @grid-span-name) {
+    @gutter-accumulated: @grid-gutter-width * ((@to - @from) - (@to - @index));   
+    width: round(@grid-column-width * @index + @gutter-accumulated, 2);
+}
+
+.loop(1, @grid-column-count, @grid-span-name);
+
+/* loopers */
+
 .loop-mix-in(@selector, @index, @from, @to) when(@selector = '.tape') {
     content: '@{index}';
     z-index: (@to - @from) - (@to - @index);
