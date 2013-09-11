@@ -6,7 +6,7 @@
     
     .loop(@i) when(@i=<@t) {
         
-        @s: e('@{selector}-@{i}');
+        @s: e('@{selector}@{splicer}@{i}');
         
         @{s} {
             .loop-mix-in(@selector, @i, @f, @t);

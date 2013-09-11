@@ -1,336 +1,120 @@
-.dance-1980 {
-  content: '1980';
+.tape-1950 {
+  content: '1950';
   z-index: 0;
 }
-.dance-1981 {
-  content: '1981';
+.tape-1951 {
+  content: '1951';
   z-index: 1;
 }
-.dance-1982 {
-  content: '1982';
+.tape-1952 {
+  content: '1952';
   z-index: 2;
 }
-.dance-1983 {
-  content: '1983';
+.tape-1953 {
+  content: '1953';
   z-index: 3;
 }
-.dance-1984 {
-  content: '1984';
+.tape-1954 {
+  content: '1954';
   z-index: 4;
 }
-.dance-1985 {
-  content: '1985';
+.tape-1955 {
+  content: '1955';
   z-index: 5;
 }
-.dance-1986 {
-  content: '1986';
+.tape-1956 {
+  content: '1956';
   z-index: 6;
 }
-.dance-1987 {
-  content: '1987';
+.tape-1957 {
+  content: '1957';
   z-index: 7;
 }
-.dance-1988 {
-  content: '1988';
+.tape-1958 {
+  content: '1958';
   z-index: 8;
 }
-.dance-1989 {
-  content: '1989';
+.tape-1959 {
+  content: '1959';
   z-index: 9;
 }
-.dance-1990 {
-  content: '1990';
+.tape-1960 {
+  content: '1960';
   z-index: 10;
 }
-.dance-1991 {
-  content: '1991';
+.tape-1961 {
+  content: '1961';
   z-index: 11;
 }
-.dance-1992 {
-  content: '1992';
+.tape-1962 {
+  content: '1962';
   z-index: 12;
 }
-.dance-1993 {
-  content: '1993';
+.tape-1963 {
+  content: '1963';
   z-index: 13;
 }
-.dance-1994 {
-  content: '1994';
+.tape-1964 {
+  content: '1964';
   z-index: 14;
 }
-.dance-1995 {
-  content: '1995';
+.tape-1965 {
+  content: '1965';
   z-index: 15;
 }
-.dance-1996 {
-  content: '1996';
+.tape-1966 {
+  content: '1966';
   z-index: 16;
 }
-.dance-1997 {
-  content: '1997';
+.tape-1967 {
+  content: '1967';
   z-index: 17;
 }
-.dance-1998 {
-  content: '1998';
+.tape-1968 {
+  content: '1968';
   z-index: 18;
 }
-.dance-1999 {
-  content: '1999';
+.tape-1969 {
+  content: '1969';
   z-index: 19;
 }
-.dance-2000 {
-  content: '2000';
-  z-index: 20;
-}
-.dance-2001 {
-  content: '2001';
-  z-index: 21;
-}
-.dance-2002 {
-  content: '2002';
-  z-index: 22;
-}
-.dance-2003 {
-  content: '2003';
-  z-index: 23;
-}
-.dance-2004 {
-  content: '2004';
-  z-index: 24;
-}
-.dance-2005 {
-  content: '2005';
-  z-index: 25;
-}
-.dance-2006 {
-  content: '2006';
-  z-index: 26;
-}
-.dance-2007 {
-  content: '2007';
-  z-index: 27;
-}
-.dance-2008 {
-  content: '2008';
-  z-index: 28;
-}
-.dance-2009 {
-  content: '2009';
-  z-index: 29;
-}
-.dance-2010 {
-  content: '2010';
-  z-index: 30;
-}
-.dance-2011 {
-  content: '2011';
-  z-index: 31;
-}
-.dance-2012 {
-  content: '2012';
-  z-index: 32;
-}
-.dance-2013 {
-  content: '2013';
-  z-index: 33;
-}
-.dance-2014 {
-  content: '2014';
-  z-index: 34;
-}
-.dance-2015 {
-  content: '2015';
-  z-index: 35;
-}
-.dance-2016 {
-  content: '2016';
-  z-index: 36;
-}
-.dance-2017 {
-  content: '2017';
-  z-index: 37;
-}
-.dance-2018 {
-  content: '2018';
-  z-index: 38;
-}
-.dance-2019 {
-  content: '2019';
-  z-index: 39;
-}
-.dance-2020 {
-  content: '2020';
-  z-index: 40;
-}
-#kraftwerk-1970 {
+.tape-1970 {
   content: '1970';
-  z-index: 0;
-}
-#kraftwerk-1971 {
-  content: '1971';
-  z-index: 1;
-}
-#kraftwerk-1972 {
-  content: '1972';
-  z-index: 2;
-}
-#kraftwerk-1973 {
-  content: '1973';
-  z-index: 3;
-}
-#kraftwerk-1974 {
-  content: '1974';
-  z-index: 4;
-}
-#kraftwerk-1975 {
-  content: '1975';
-  z-index: 5;
-}
-#kraftwerk-1976 {
-  content: '1976';
-  z-index: 6;
-}
-#kraftwerk-1977 {
-  content: '1977';
-  z-index: 7;
-}
-#kraftwerk-1978 {
-  content: '1978';
-  z-index: 8;
-}
-#kraftwerk-1979 {
-  content: '1979';
-  z-index: 9;
-}
-#kraftwerk-1980 {
-  content: '1980';
-  z-index: 10;
-}
-#public-enemy-1980 {
-  content: '1980';
-  z-index: 0;
-}
-#public-enemy-1981 {
-  content: '1981';
-  z-index: 1;
-}
-#public-enemy-1982 {
-  content: '1982';
-  z-index: 2;
-}
-#public-enemy-1983 {
-  content: '1983';
-  z-index: 3;
-}
-#public-enemy-1984 {
-  content: '1984';
-  z-index: 4;
-}
-#public-enemy-1985 {
-  content: '1985';
-  z-index: 5;
-}
-#public-enemy-1986 {
-  content: '1986';
-  z-index: 6;
-}
-#public-enemy-1987 {
-  content: '1987';
-  z-index: 7;
-}
-#public-enemy-1988 {
-  content: '1988';
-  z-index: 8;
-}
-#public-enemy-1989 {
-  content: '1989';
-  z-index: 9;
-}
-#public-enemy-1990 {
-  content: '1990';
-  z-index: 10;
-}
-#animal-collective-2000 {
-  content: '2000';
-  z-index: 0;
-}
-#animal-collective-2001 {
-  content: '2001';
-  z-index: 1;
-}
-#animal-collective-2002 {
-  content: '2002';
-  z-index: 2;
-}
-#animal-collective-2003 {
-  content: '2003';
-  z-index: 3;
-}
-#animal-collective-2004 {
-  content: '2004';
-  z-index: 4;
-}
-#animal-collective-2005 {
-  content: '2005';
-  z-index: 5;
-}
-#animal-collective-2006 {
-  content: '2006';
-  z-index: 6;
-}
-#animal-collective-2007 {
-  content: '2007';
-  z-index: 7;
-}
-#animal-collective-2008 {
-  content: '2008';
-  z-index: 8;
-}
-#animal-collective-2009 {
-  content: '2009';
-  z-index: 9;
-}
-#animal-collective-2010 {
-  content: '2010';
-  z-index: 10;
-}
-#animal-collective-2011 {
-  content: '2011';
-  z-index: 11;
-}
-#animal-collective-2012 {
-  content: '2012';
-  z-index: 12;
-}
-#animal-collective-2013 {
-  content: '2013';
-  z-index: 13;
-}
-#animal-collective-2014 {
-  content: '2014';
-  z-index: 14;
-}
-#animal-collective-2015 {
-  content: '2015';
-  z-index: 15;
-}
-#animal-collective-2016 {
-  content: '2016';
-  z-index: 16;
-}
-#animal-collective-2017 {
-  content: '2017';
-  z-index: 17;
-}
-#animal-collective-2018 {
-  content: '2018';
-  z-index: 18;
-}
-#animal-collective-2019 {
-  content: '2019';
-  z-index: 19;
-}
-#animal-collective-2020 {
-  content: '2020';
   z-index: 20;
+}
+#public-enemy.year-1982 {
+  content: '1982';
+  z-index: 0;
+}
+#public-enemy.year-1983 {
+  content: '1983';
+  z-index: 1;
+}
+#public-enemy.year-1984 {
+  content: '1984';
+  z-index: 2;
+}
+#public-enemy.year-1985 {
+  content: '1985';
+  z-index: 3;
+}
+#public-enemy.year-1986 {
+  content: '1986';
+  z-index: 4;
+}
+#public-enemy.year-1987 {
+  content: '1987';
+  z-index: 5;
+}
+#public-enemy.year-1988 {
+  content: '1988';
+  z-index: 6;
+}
+#public-enemy.year-1989 {
+  content: '1989';
+  z-index: 7;
+}
+#public-enemy.year-1990 {
+  content: '1990';
+  z-index: 8;
 }
