@@ -14,7 +14,7 @@
     @media screen and (min-width:@grid-max-width) {
         width: @grid-max-width;
     }
-    @media screen and (max-width:@grid-min-width) {
+    @media screen and (max-width:@grid-max-width) {
         width: 100%;
     }
     &:after {
@@ -32,6 +32,7 @@
     @media screen and (max-width:@grid-min-width) {
         float: none;
         margin-left: 0;
+        width: auto;
     }
 }
 
