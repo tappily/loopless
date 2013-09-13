@@ -43,6 +43,12 @@ module.exports = function(grunt) {
             options: {
                 file: 'bower.json'
             }
+        },
+        watch: {
+            less: {
+                files: 'src/less/*.less',
+                tasks: ['lesslint']
+            },
         }
     });
 
