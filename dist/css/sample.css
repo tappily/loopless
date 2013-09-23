@@ -1,4 +1,27 @@
-/* grid */
+/*
+headers
+*/
+h1 {
+  font-size: 12px;
+}
+h2 {
+  font-size: 17px;
+}
+h3 {
+  font-size: 23px;
+}
+h4 {
+  font-size: 29px;
+}
+h5 {
+  font-size: 35px;
+}
+h6 {
+  font-size: 42px;
+}
+/*
+grid
+*/
 @media screen and (min-width: 960px) {
   .grid {
     width: 960px;
@@ -66,124 +89,24 @@
 .grid-span-12 {
   width: 100%;
 }
-/* loopers */
-.tape-1950 {
-  content: '1950';
+/*
+overlay
+*/
+#overlay.l-0 {
   z-index: 0;
 }
-.tape-1951 {
-  content: '1951';
+#overlay.l-1 {
   z-index: 1;
 }
-.tape-1952 {
-  content: '1952';
+#overlay.l-2 {
   z-index: 2;
 }
-.tape-1953 {
-  content: '1953';
+#overlay.l-3 {
   z-index: 3;
 }
-.tape-1954 {
-  content: '1954';
+#overlay.l-4 {
   z-index: 4;
 }
-.tape-1955 {
-  content: '1955';
+#overlay.l-5 {
   z-index: 5;
-}
-.tape-1956 {
-  content: '1956';
-  z-index: 6;
-}
-.tape-1957 {
-  content: '1957';
-  z-index: 7;
-}
-.tape-1958 {
-  content: '1958';
-  z-index: 8;
-}
-.tape-1959 {
-  content: '1959';
-  z-index: 9;
-}
-.tape-1960 {
-  content: '1960';
-  z-index: 10;
-}
-.tape-1961 {
-  content: '1961';
-  z-index: 11;
-}
-.tape-1962 {
-  content: '1962';
-  z-index: 12;
-}
-.tape-1963 {
-  content: '1963';
-  z-index: 13;
-}
-.tape-1964 {
-  content: '1964';
-  z-index: 14;
-}
-.tape-1965 {
-  content: '1965';
-  z-index: 15;
-}
-.tape-1966 {
-  content: '1966';
-  z-index: 16;
-}
-.tape-1967 {
-  content: '1967';
-  z-index: 17;
-}
-.tape-1968 {
-  content: '1968';
-  z-index: 18;
-}
-.tape-1969 {
-  content: '1969';
-  z-index: 19;
-}
-.tape-1970 {
-  content: '1970';
-  z-index: 20;
-}
-#public-enemy.year-1982 {
-  content: '1982';
-  z-index: 0;
-}
-#public-enemy.year-1983 {
-  content: '1983';
-  z-index: 1;
-}
-#public-enemy.year-1984 {
-  content: '1984';
-  z-index: 2;
-}
-#public-enemy.year-1985 {
-  content: '1985';
-  z-index: 3;
-}
-#public-enemy.year-1986 {
-  content: '1986';
-  z-index: 4;
-}
-#public-enemy.year-1987 {
-  content: '1987';
-  z-index: 5;
-}
-#public-enemy.year-1988 {
-  content: '1988';
-  z-index: 6;
-}
-#public-enemy.year-1989 {
-  content: '1989';
-  z-index: 7;
-}
-#public-enemy.year-1990 {
-  content: '1990';
-  z-index: 8;
 }
