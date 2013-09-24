@@ -1,8 +1,8 @@
 @import 'loop';
 
-@text-max-size: 42px;
+@text-max-size: 48px;
 @text-min-size: 12px;
-@text-scale-strength: 1.1;
+@text-scale-strength: 2.2;
 @text-scale-interpolation: 'ease-in';
 
 /*
@@ -11,14 +11,14 @@ headers
 
 .loop-mix-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = 'ease-in') {
   @range: @text-max-size - @text-min-size;
-  @count: @index - @from;
+  @count: @to - @index;
   @ease: pow(@count / (@to - 1), @text-scale-strength);
   font-size: round(@text-min-size + @range * @ease);
 }
 
 .loop-mix-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = 'ease-out') {
   @range: @text-max-size - @text-min-size;
-  @count: @index - @from;
+  @count: @to - @index;
   @ease: 1 - pow(1 - @count / (@to - 1), @text-scale-strength);
   font-size: round(@text-min-size + @range * @ease);
 }
