@@ -4,14 +4,14 @@
 
 @grid-width: 100%;
 @grid-col-gap: 0.8%;
-@grid-column-count: 12;
-@grid-column-width: (@grid-width - @grid-col-gap * (@grid-column-count - 1)) / @grid-column-count;
+@grid-col-count: 12;
+@grid-column-width: (@grid-width - @grid-col-gap * (@grid-col-count - 1)) / @grid-col-count;
 
-.grid-style(@prop, @value) when(@prop = span) {
+.grid-style(@prop, @value) when (@prop = span) {
   width: @value;
 }
 
-.grid-style(@prop, @value) when(@prop = offset) {
+.grid-style(@prop, @value) when (@prop = offset) {
   margin-left: @value;
 }
 
@@ -21,14 +21,32 @@
   .grid-style(@prop, @grid-span-size);
 }
 
+.loop-mix-in(@selector, @index, @from, @to) when (@selector = '> .grid') {
+  @gap: @grid-col-gap * @grid-col-count / @to;
+  @gap-sum: @gap * (@index - @from);
+
+  &-span-@{index} {
+    width: round(((@grid-width - @gap * (@to - @from)) / @to) * @index, 2);
+  }
+
+}
+
 .loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid') {
   &-span-@{index} {
     .grid-span(span, @index);
+
+    .grid-col {
+      margin-left: round(@grid-col-gap * (@grid-col-count / @index), 2);
+    }
+
+    .loop(1, @index, '> .grid', '', none);
+
   }
 
   &-offset-@{index} {
     .grid-span(offset, @index);
   }
+
 }
 
-.loop(1, @grid-column-count, '.grid', '', none);
+.loop(1, @grid-col-count, '.grid', '', none);

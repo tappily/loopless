@@ -6,7 +6,10 @@
 
   .loop(@i) when(@i=<@t) {
 
-    .loop-build-selector(@selector, @splicer, @i, @f, @t, @decorations);
+    .loop-build-selector(@selector, @splicer, @i, @decorations);
+    @{s} {
+      .loop-mix-in(@selector, @i, @f, @t);
+    }
 
     .loop(@i + 1);
   };
@@ -21,22 +24,18 @@
   .loop(@from, @to, @selector, '-');
 }
 
-// set decorations and perform mix-in
+// set decorations
 
-.loop-build-selector(@selector, @splicer, @index, @from, @to, @decorations) when(@decorations = always) {
+.loop-build-selector(@selector, @splicer, @index, @decorations) when(@decorations = always) {
   @s: e('@{selector}@{splicer}@{index}');
-  @{s} {
-    .loop-mix-in(@selector, @index, @from, @to);
-  }
+
 }
 
-// or remove decorations and perform mix-in
+// or remove decorations
 
-.loop-build-selector(@selector, @splicer, @index, @from, @to, @decorations) when not(@decorations = always) {
+.loop-build-selector(@selector, @splicer, @index, @decorations) when not(@decorations = always) {
   @s: e('@{selector}');
-  @{s} {
-    .loop-mix-in(@selector, @index, @from, @to);
-  }
+
 }
 
 //implement this in source files
