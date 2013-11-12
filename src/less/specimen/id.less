@@ -1,0 +1,10 @@
+@import '../loop';
+
+//overlay
+
+.loop-mix-in(@selector, @index, @from, @to) when (@selector = '#id') {
+  z-index: (@index - @from);
+}
+
+.loop(0, 5, '#id', '.modifer-');
+

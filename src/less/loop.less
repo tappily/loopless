@@ -1,28 +1,44 @@
-.loop(@from, @to, @selector, @splicer) {
-    
-    @f: floor(@from);
-    @t: floor(@to);
-    @i: @f;
-    
-    .loop(@i) when(@i=<@t) {
-        
-        @s: e('@{selector}@{splicer}@{i}');
-        
-        @{s} {
-            .loop-mix-in(@selector, @i, @f, @t);
-        }
+.loop(@from, @to, @selector, @splicer, @decorations:always) {
 
-        .loop(@i + 1);
-    };
+  @f: floor(@from);
+  @t: floor(@to);
+  @i: @f;
 
-    .loop(@t) {}
+  .loop(@i) when(@i=<@t) {
 
-    .loop(@f);
-    
+    .loop-build-selector(@selector, @splicer, @i, @f, @t, @decorations);
+
+    .loop(@i + 1);
+  };
+
+  .loop(@t) {}
+
+  .loop(@f);
+
 }
 
 .loop(@from, @to, @selector) {
-    .loop(@from, @to, @selector, '-');
+  .loop(@from, @to, @selector, '-');
 }
+
+// set decorations and perform mix-in
+
+.loop-build-selector(@selector, @splicer, @index, @from, @to, @decorations) when(@decorations = always) {
+  @s: e('@{selector}@{splicer}@{index}');
+  @{s} {
+    .loop-mix-in(@selector, @index, @from, @to);
+  }
+}
+
+// or remove decorations and perform mix-in
+
+.loop-build-selector(@selector, @splicer, @index, @from, @to, @decorations) when not(@decorations = always) {
+  @s: e('@{selector}');
+  @{s} {
+    .loop-mix-in(@selector, @index, @from, @to);
+  }
+}
+
+//implement this in source files
 
 .loop-mix-in(@selector, @index, @from, @to) {}

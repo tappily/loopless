@@ -1,0 +1,17 @@
+@import '../loop';
+
+@text-max-size: 48px;
+@text-min-size: 12px;
+@text-scale-strength: 2.2;
+@text-scale-interpolation: 'ease-in';
+@text-scale-range: @text-max-size - @text-min-size;
+
+//headers
+
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = 'ease-in') {
+  @count: @to - @index;
+  @ease: pow(@count / (@to - 1), @text-scale-strength);
+  font-size: round(@text-min-size + @text-scale-range * @ease);
+}
+
+.loop(1, 6, 'h', '');
