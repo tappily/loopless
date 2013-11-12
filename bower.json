@@ -8,5 +8,16 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "homepage": "https://github.com/tappily/loopless",
+  "authors": [
+    "tappily"
+  ],
+  "description": "Encapsulated loop function for LESS",
+  "keywords": [
+    "LESS",
+    "loop",
+    "CSS"
+  ],
+  "license": "MIT"
 }
