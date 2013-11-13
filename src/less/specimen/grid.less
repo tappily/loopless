@@ -1,52 +1,23 @@
 @import '../loop';
 
-// no decorations
-
-@grid-width: 100%;
-@grid-col-gap: 0.8%;
-@grid-col-count: 12;
-@grid-column-width: (@grid-width - @grid-col-gap * (@grid-col-count - 1)) / @grid-col-count;
-
-.grid-style(@prop, @value) when (@prop = span) {
-  width: @value;
-}
-
-.grid-style(@prop, @value) when (@prop = offset) {
-  margin-left: @value;
-}
-
-.grid-span(@prop, @value) {
-  @gutter-accumulated: @grid-col-gap * (@value - 1);
-  @grid-span-size: round(@grid-column-width * @value + @gutter-accumulated, 2);
-  .grid-style(@prop, @grid-span-size);
-}
-
-.loop-mix-in(@selector, @index, @from, @to) when (@selector = '> .grid') {
-  @gap: @grid-col-gap * @grid-col-count / @to;
-  @gap-sum: @gap * (@index - @from);
+.loop-mix-in(@selector, @index, @from, @to) when (@selector = ' .grid') {
 
   &-span-@{index} {
-    width: round(((@grid-width - @gap * (@to - @from)) / @to) * @index, 2);
+    @nested-col-width: 100% / @to;
+    width: @nested-col-width * @index;
   }
 
 }
 
 .loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid') {
+
   &-span-@{index} {
-    .grid-span(span, @index);
+    @grid-col-width: 100% / @to;
+    width: @grid-col-width * @index;
 
-    .grid-col {
-      margin-left: round(@grid-col-gap * (@grid-col-count / @index), 2);
-    }
-
-    .loop(1, @index, '> .grid', '', none);
-
-  }
-
-  &-offset-@{index} {
-    .grid-span(offset, @index);
+    .loop(1, (@index - @from + 1), ' .grid', '-', none);
   }
 
 }
 
-.loop(1, @grid-col-count, '.grid', '', none);
+.loop(1, 12, '.grid', '-', none);
