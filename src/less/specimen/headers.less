@@ -11,7 +11,9 @@
 .loop-mix-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = 'ease-in') {
   @count: @to - @index;
   @ease: pow(@count / (@to - 1), @text-scale-strength);
-  font-size: round(@text-min-size + @text-scale-range * @ease);
+  &@{index} {
+    font-size: round(@text-min-size + @text-scale-range * @ease);
+  }
 }
 
-.loop(1, 6, 'h', '');
+.loop(1, 6, 'h');

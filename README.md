@@ -12,14 +12,16 @@ Extend .loop-mix-in
 -------------------
 
     .loop-mix-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
-      content: '@{index}';
-      z-index: (@to - @from) - (@to - @index);
+      &.model-@{index} {
+        content: '@{index}';
+        z-index: (@index - @from);
+      }
     }
 
 Loop it
 -------
 
-    .loop(1970, 1980, '#kraftwerk', '.model-');
+    .loop(1970, 1980, '#kraftwerk');
     
 
 Rewind

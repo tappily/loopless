@@ -1,23 +1,28 @@
 @import '../loop';
 
-.loop-mix-in(@selector, @index, @from, @to) when (@selector = ' .grid') {
+.grid-span(@index, @total) {
+  width: 100% / @total * @index;
+}
 
-  &-span-@{index} {
-    @nested-col-width: 100% / @to;
-    width: @nested-col-width * @index;
+// nested grid spans
+
+.loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid-') {
+
+  &span-@{index} {
+    .grid-span(@index, @to);
   }
 
 }
+
+// grid spans
 
 .loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid') {
 
   &-span-@{index} {
-    @grid-col-width: 100% / @to;
-    width: @grid-col-width * @index;
-
-    .loop(1, (@index - @from + 1), ' .grid', '-', none);
+    .grid-span(@index, @to);
+    .loop(1, (@index - @from + 1), '.grid-');
   }
 
 }
 
-.loop(1, 12, '.grid', '-', none);
+.loop(1, 12, '.grid');
