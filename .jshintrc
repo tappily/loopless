@@ -7,6 +7,5 @@
     "newcap": true,
     "quotmark": true,
     "strict": true,
-    "trailing": true,
-    "smarttabs": true
+    "trailing": true
 }
