@@ -35,6 +35,10 @@ module.exports = function(grunt) {
             gruntfile: ['Gruntfile.js']
         },
         less: {
+            options: {
+                strictMath: true,
+                strictUnits: true
+            },
             specimen: {
                 files: [
                     {'dist/css/specimen.css': 'src/less/specimen/*.less'}
