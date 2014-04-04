@@ -51,8 +51,8 @@ module.exports = function(grunt) {
         },
         watch: {
             less: {
-                files: 'src/less/*.less',
-                tasks: ['csslint', 'less']
+                files: 'src/less/**/*.less',
+                tasks: ['less', 'csslint']
             }
         }
     });
@@ -64,5 +64,5 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('test', ['jshint', 'csslint']);
-    grunt.registerTask('build', ['clean', 'test', 'less', 'copy']);
+    grunt.registerTask('build', ['clean', 'less', 'test', 'copy']);
 };

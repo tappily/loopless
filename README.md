@@ -8,20 +8,20 @@ Load
 
     bower --save-dev install loopless
 
-Extend .loop-mix-in
--------------------
+Extend .loop-in
+---------------
 
-    .loop-mix-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
+    .loop-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
       &.model-@{index} {
         content: '@{index}';
         z-index: (@index - @from);
       }
     }
 
-Loop it
--------
+Loop in a selection
+-------------------
 
-    .loop(1970, 1980, '#kraftwerk');
+    .loop(in, '#kraftwerk', 1970, 1980);
     
 
 Rewind
@@ -36,6 +36,16 @@ Rewind
       z-index: 1;
     }
     ...
+
+Re-mix
+------
+    .loop-over(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
+      #kraftwerk.model-@{index} {
+        display: block;
+      }
+    }
+
+    .loop(over, '#kraftwerk', 1970, 1980);
 
 Ups
 ---

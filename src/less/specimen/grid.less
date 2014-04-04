@@ -6,23 +6,20 @@
 
 // nested grid spans
 
-.loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid-') {
-
+.loop-in(@selector, @index, @from, @to) when (@selector = '.grid-') {
   &span-@{index} {
     .grid-span(@index, @to);
   }
-
 }
 
 // grid spans
 
-.loop-mix-in(@selector, @index, @from, @to) when (@selector = '.grid') {
-
+.loop-in(@selector, @index, @from, @to) when (@selector = '.grid') {
   &-span-@{index} {
+    z-index:(@index - @from + 1);
     .grid-span(@index, @to);
-    .loop(1, (@index - @from + 1), '.grid-');
+    .loop(in, '.grid-', 1, (@index - @from + 1));
   }
-
 }
 
-.loop(1, 12, '.grid');
+.loop(in, '.grid', 1, 12);

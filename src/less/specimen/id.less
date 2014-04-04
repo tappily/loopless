@@ -1,12 +1,18 @@
 @import '../loop';
 
 //overlay
-
-.loop-mix-in(@selector, @index, @from, @to) when (@selector = '#id') {
-  &.modifier-@{index} {
+.loop-in(@selector, @index, @from, @to) when (@selector = 'label') {
+  &[for='modifier-@{index}'] {
     z-index: (@index - @from);
   }
 }
 
-.loop(0, 5, '#id');
+.loop-over(@selector, @index, @from, @to) when (@selector = 'label') {
+  label[for='modifier-@{index}'] {
+    text-decoration: underline;
+  }
+}
+
+.loop(in, 'label', 0, 5);
+.loop(over, 'label', 4, 5);
 

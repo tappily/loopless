@@ -3,12 +3,12 @@
 @text-max-size: 64px;
 @text-min-size: 12px;
 @text-scale-strength: 2.5;
-@text-scale-interpolation: 'ease-in';
+@text-scale-interpolation: ease-in;
 @text-scale-range: @text-max-size - @text-min-size;
 
 //headers
 
-.loop-mix-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = 'ease-in') {
+.loop-in(@selector, @index, @from, @to) when(@selector = 'h') and (@text-scale-interpolation = ease-in) {
   @count: @to - @index;
   @ease: pow((@count / (@to - 1)), @text-scale-strength);
   &@{index} {
@@ -16,4 +16,4 @@
   }
 }
 
-.loop(1, 6, 'h');
+.loop(in, 'h', 1, 6);
