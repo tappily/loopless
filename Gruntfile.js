@@ -4,7 +4,6 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
         clean: {
             dist: ['dist']
         },
@@ -57,12 +56,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', [
-        'clean',
-        'test',
-        'build'
-    ]);
-
+    grunt.registerTask('default', ['build']);
     grunt.registerTask('test', ['jshint', 'csslint']);
     grunt.registerTask('build', ['clean', 'less', 'test', 'copy']);
 };
