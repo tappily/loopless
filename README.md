@@ -5,9 +5,9 @@ Encapsulated .loop function in LESS
 
 Load
 ----
-
+```shell
     bower --save-dev install loopless
-
+```
 Make a mix
 ----------
 ```css
