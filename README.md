@@ -10,23 +10,23 @@ Load
 
 Make a mix
 ----------
-
+```css
     .loop-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
       &.model-@{index} {
         content: '@{index}';
         z-index: (@index - @from);
       }
     }
-
+```
 Loop in selector
 ----------------
-
+```css
     .loop(in, '#kraftwerk', 1970, 1980);
-    
+```   
 
 Rewind
 ------
-
+```css
     #kraftwerk.model-1970 {
       content: '1970';
       z-index: 0;
@@ -36,10 +36,10 @@ Rewind
       z-index: 1;
     }
     ...
-
+```
 Get over
 --------
-
+```css
     .loop-over(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
       &.model-@{index} {
         display: block;
@@ -49,7 +49,7 @@ Get over
     #kraftwerk {
       .loop(over, '#kraftwerk', 1970, 1980);
     }
-
+```
 Ups
 ---
 
