@@ -8,8 +8,8 @@ Load
 
     bower --save-dev install loopless
 
-Extend .loop-in
----------------
+Mix-in
+------
 
     .loop-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
       &.model-@{index} {
@@ -18,8 +18,8 @@ Extend .loop-in
       }
     }
 
-Loop in a selection
--------------------
+Loop in
+-------
 
     .loop(in, '#kraftwerk', 1970, 1980);
     
