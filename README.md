@@ -37,8 +37,9 @@ Rewind
     }
     ...
 
-Re-mix
-------
+Get over
+--------
+
     .loop-over(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
       #kraftwerk.model-@{index} {
         display: block;
