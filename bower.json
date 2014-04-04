@@ -1,7 +1,7 @@
 {
   "name": "loopless",
   "version": "1.0.1",
-  "main": "src/less/loop.less",
+  "main": "dist/less/loop.less",
   "ignore": [
     "**/.*",
     "node_modules",
