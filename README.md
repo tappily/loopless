@@ -1,5 +1,5 @@
-loopless
-========
+&#426;oop.&#426;ess
+===================
 
 Encapsulated .loop function in LESS
 
