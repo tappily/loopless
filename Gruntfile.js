@@ -19,14 +19,13 @@ module.exports = function(grunt) {
                     }]
             }
         },
-        lesslint: {
+        csslint: {
             options: {
-                formatters: [{
-                        id: 'csslint-xml',
-                        dest: 'report/lesslint.xml'
-                    }]
+                csslintrc: '.csslintrc'
             },
-            src: ['src/less/*.less']
+            strict: {
+                src: ['dist/css/*.css']
+            }
         },
         jshint: {
             options: {
@@ -53,7 +52,7 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: 'src/less/*.less',
-                tasks: ['lesslint', 'less']
+                tasks: ['csslint', 'less']
             }
         }
     });
@@ -64,6 +63,6 @@ module.exports = function(grunt) {
         'build'
     ]);
 
-    grunt.registerTask('test', ['jshint', 'lesslint']);
+    grunt.registerTask('test', ['jshint', 'csslint']);
     grunt.registerTask('build', ['clean', 'test', 'less', 'copy']);
 };

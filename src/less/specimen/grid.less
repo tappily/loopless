@@ -1,7 +1,7 @@
 @import '../loop';
 
 .grid-span(@index, @total) {
-  width: (100% / @total * @index);
+  width: round((100% / @total * @index),2);
 }
 
 // nested grid spans
