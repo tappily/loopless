@@ -300,27 +300,27 @@ h6 {
   font-size: 12px;
 }
 
-label[for='modifier-0'] {
+body:nth-child(0) {
   z-index: 0;
 }
-label[for='modifier-1'] {
+body:nth-child(1) {
   z-index: 1;
 }
-label[for='modifier-2'] {
+body:nth-child(2) {
   z-index: 2;
 }
-label[for='modifier-3'] {
+body:nth-child(3) {
   z-index: 3;
 }
-label[for='modifier-4'] {
+body:nth-child(4) {
   z-index: 4;
 }
-label[for='modifier-5'] {
+body:nth-child(5) {
   z-index: 5;
 }
-label[for='modifier-4'] {
+body:nth-child(4) {
   text-decoration: underline;
 }
-label[for='modifier-5'] {
+body:nth-child(5) {
   text-decoration: underline;
 }

@@ -41,12 +41,14 @@ Get over
 --------
 
     .loop-over(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
-      #kraftwerk.model-@{index} {
+      &.model-@{index} {
         display: block;
       }
     }
 
-    .loop(over, '#kraftwerk', 1970, 1980);
+    #kraftwerk {
+      .loop(over, '#kraftwerk', 1970, 1980);
+    }
 
 Ups
 ---
