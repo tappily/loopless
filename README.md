@@ -11,42 +11,42 @@ Load
 Make a mix
 ----------
 ```css
-    .loop-in(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
-      &.model-@{index} {
+    .loop-in(@selector, @index, @from, @to) when(@selector = '.fader') {
+      &--level-@{index} {
         content: '@{index}';
-        z-index: (@index - @from);
+        volume: (@index - @from);
       }
     }
 ```
 Loop in selector
 ----------------
 ```css
-    .loop(in, '#kraftwerk', 1970, 1980);
+    .loop(in, '.fader', 50, 100);
 ```   
 
 Rewind
 ------
 ```css
-    #kraftwerk.model-1970 {
-      content: '1970';
-      z-index: 0;
+    .fader--level-0 {
+      content: '50';
+      volume: 0;
     }
-    #kraftwerk.model-1971 {
-      content: '1971';
-      z-index: 1;
+    .fader--level-1 {
+      content: '51';
+      volume: 1;
     }
     ...
 ```
 Get over
 --------
 ```css
-    .loop-over(@selector, @index, @from, @to) when(@selector = '#kraftwerk') {
-      &.model-@{index} {
-        display: block;
+    .loop-over(@selector, @index, @from, @to) when(@selector = '.fader') {
+      &--level-@{index} {
+        ...
       }
     }
 
-    #kraftwerk {
-      .loop(over, '#kraftwerk', 1970, 1980);
+    .fader {
+      .loop(over, '.fader', 0, 50);
     }
 ```
