@@ -16,16 +16,15 @@
   .loop(@f);
 }
 
-.loop-route(@route, @selector, @i, @f, @t) when(@route = over) {
-  & {
+.loop-route(@route, @selector, @i, @f, @t) {
+  & when(@route = over) {
     .loop-over(@selector, @i, @f, @t);
   }
-}
-
-.loop-route(@route, @selector, @i, @f, @t) when(@route = in) {
-  @s: e(@selector);
-  @{s} {
-    .loop-in(@selector, @i, @f, @t);
+  & when(@route = in) {
+    @s: e(@selector);
+    @{s} {
+      .loop-in(@selector, @i, @f, @t);
+    }
   }
 }
 
