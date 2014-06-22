@@ -7,7 +7,7 @@
   @t: floor(@to);
   @i: @f;
 
-  .loop(@i) when (@i=<@t) {
+  .loop(@i) when (@i<=@t) {
     .loop-route(@route, @selector, @i, @f, @t);
     .loop((@i + 1));
   }
